@@ -6,18 +6,18 @@
 .box-color {
   color: #000000;
 }
-.carousel {
+#carousel .carousel  {
   img{
     width: 100%;
   }
 }
 
-::ng-deep .carousel-control-prev-icon{
+::ng-deep #carousel .carousel-control-prev-icon{
   background-image: url('src/assets/icon/iconfinder-icon (1).svg') !important;
   width: 100px;
   height: 100px;
 }
-::ng-deep .carousel-control-next-icon{
+::ng-deep #carousel .carousel-control-next-icon{
   background-image: url('src/assets/icon/iconfinder-icon.svg')!important;
   width: 100px;
   height: 100px;
@@ -54,4 +54,11 @@
   color: green;
   font-weight: bold;
 
+}
+::ng-deep #carousel1 {
+  img {
+    width: 100%;
+    height: 95px;
+  }
+  height: 95px;
 }
