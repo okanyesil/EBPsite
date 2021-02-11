@@ -65,3 +65,78 @@
   }
   height: 95px;
 }
+
+.baslik {
+  font-size: 24px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+::ng-deep .owl-next {
+  background-color: #ffff;
+  margin: 0!important;
+  padding: 0!important;
+  background-image: url("src/assets/icon/next.svg")!important;
+}
+::ng-deep .owl-prev {
+  background-color: #ffff;
+  margin: 0!important;
+  padding: 0!important;
+  background-image: url("src/assets/icon/next.svg")!important;
+}
+::ng-deep .owl-dot  {
+  display: none!important;
+}
+
+/* yeni çıkan  kitaplar*/
+
+.yeniCikanBaslik {
+  font-size: 28px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 0 0 0 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.greenRectangle {
+  display: inline-block;
+  width: 7px;
+  height: 35px;
+  margin-right: 15px;
+  margin-bottom: -5px;
+  background-color: #3aaf4a;
+}
+.blueRectangle {
+    display: inline-block;
+    width: 7px;
+    height: 35px;
+    margin-right: 15px;
+    margin-bottom: -5px;
+    background-color: #499acf;
+}
+
+.orangeRectangle {
+  display: inline-block;
+  width: 7px;
+  height: 35px;
+  margin-right: 15px;
+  margin-bottom: -5px;
+  background-color: #ffa200;
+}
+.ozluSoz{
+  background-color: #ff9706;
+  color: white;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+  height: 150px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  p{
+    display: block;
+    margin: 50px;
+  }
+  .yazar{
+    display: block;
+    font-size: 14px;
+  }
+
+}

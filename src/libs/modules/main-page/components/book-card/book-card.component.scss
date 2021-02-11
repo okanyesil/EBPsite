@@ -1,0 +1,30 @@
+a {
+  background-color: orange;
+}
+a:hover {
+  box-shadow: 5px 5px 10px 10px gray;
+}
+
+.card:hover{
+  box-shadow: 5px 3px 5px 5px gray;
+}
+.author {
+  color: #49A0D5;
+}
+.card {
+  cursor: grab;
+}
+.card-body{
+  padding-top: 0 !important;
+}
+.putInfrontOfImg{
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  border-radius: 5px;
+  width: 50px;
+  text-align: center;
+  float: right;
+}
+

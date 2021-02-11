@@ -8,7 +8,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class MainPageContainerComponent implements OnInit {
 
 
-  customOptions:OwlOptions  = {
+  customOptions: OwlOptions  = {
     loop: true,
     mouseDrag: true,
     touchDrag: true,

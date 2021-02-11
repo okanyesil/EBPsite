@@ -6,9 +6,11 @@ import { MainPageContainerComponent } from './containers/main-page-container/mai
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {NavbarContainerComponent} from '../navbar/containers/navbar-container/navbar-container.component';
+import { BookCardComponent } from './components/book-card/book-card.component';
+import { YeniKitapComponent } from './components/yeni-kitap/yeni-kitap.component';
 
 @NgModule({
-    declarations: [MainPageContainerComponent, NavbarContainerComponent],
+    declarations: [MainPageContainerComponent, NavbarContainerComponent, BookCardComponent, YeniKitapComponent],
   imports: [
     CommonModule,
     MainPageRoutingModule,

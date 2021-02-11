@@ -1,0 +1,47 @@
+a {
+  background-color: orange;
+  transition: 0.5s;
+  transform: translateY(400%);
+}
+a:hover {
+  box-shadow: 5px 5px 10px 10px gray;
+}
+
+.card:hover{
+  a {
+    transition: 0.5s;
+    transform: translateY(100%);
+  }
+
+  box-shadow: 5px 3px 5px 5px gray;
+}
+.author {
+  color: #49A0D5;
+}
+.card {
+  cursor: grab;
+}
+.card-body{
+  padding-top: 0 !important;
+}
+.putInfrontOfImg{
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  border-radius: 5px;
+  width: 67px;
+  height: 27px;
+  text-align: center;
+  float: right;
+  padding: 5px;
+}
+.bookmark {
+  text-align: center;
+  float: right;
+  padding: 5px;
+}
+.card-text span {
+  font-size: 25px;
+}
+
