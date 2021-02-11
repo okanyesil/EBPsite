@@ -1,8 +1,5 @@
-
-  
-
 <div class="navbar-placeholder">
-<h1>Buraya Navbar gelecek</h1>
+<app-navbar-container></app-navbar-container>
 
 </div>
 
@@ -51,7 +48,7 @@
             </div>
 
             <div class="col-md-6">
-              <img src="assets/images/gununFirsat.png" class="w-75">
+              <img src="assets/images/gununFirsat.png" class="w-75 d-flex justify-content-center">
             </div>
           </div>
       </div>
@@ -77,31 +74,31 @@
             <div class="picsum-img-wrapper">
               <img src="../../../../../assets/carousel/6.jpg">
             </div>
-          </ng-template>   
+          </ng-template>
           </ngb-carousel>
-  
+
         </div>
         </div>
     <br/>
 
-      <div class="row">
+</div>
+<div class="container">
+  <div class="row my-3">
 
-        <div class="col-md-6">
-          <img src="../../../../../assets/images/sağ.jpg">
-        </div>
+    <div class="col-md-6 p-1">
+      <img src="../../../../../assets/images/sağ.jpg">
+    </div>
 
-        <div class="col-md-6">
-          <img src="../../../../../assets/images/sol.jpg">
-        </div>
+    <div class="col-md-6">
+      <img src="../../../../../assets/images/sol.jpg">
+    </div>
+  </div>
+</div>
 
-      </div>
-     
-      <div class="row">
-      <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide><img src="../../../../../assets/images/sol.jpg" alt=""></ng-template>  
-        <ng-template carouselSlide><img src="../../../../../assets/images/sağ.jpg" alt=""></ng-template>  
-        <ng-template carouselSlide><img src="../../../../../assets/images/sol.jpg" alt=""></ng-template>  
-      </owl-carousel-o>
-      </div>
-     
- 
+
+<!-- Kayan kitap -->
+<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide><img src="../../../../../assets/images/sol.jpg" alt=""></ng-template>
+  <ng-template carouselSlide><img src="../../../../../assets/images/sağ.jpg" alt=""></ng-template>
+  <ng-template carouselSlide><img src="../../../../../assets/images/sol.jpg" alt=""></ng-template>
+</owl-carousel-o>
