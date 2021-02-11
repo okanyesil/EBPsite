@@ -1,29 +1,33 @@
+
+  
+
 <div class="navbar-placeholder">
-  <h1>Buraya Navbar gelecek</h1>
+<h1>Buraya Navbar gelecek</h1>
 
 </div>
 
-  <div class="row mx-2">
-    <div class="col-md-8">
-      <ngb-carousel id="carousel">
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img src="../../../../../assets/carousel/1.jpg">
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img src="../../../../../assets/carousel/2.jpg">
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img src="../../../../../assets/carousel/3.jpg">
-          </div>
-        </ng-template>
-      </ngb-carousel>
-    </div>
-    <div class="col-md-4">
+<div class="row mx-2">
+  <div class="col-md-8">
+    <ngb-carousel id="carousel">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../../../../assets/carousel/1.jpg">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../../../../assets/carousel/2.jpg">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../../../../assets/carousel/3.jpg">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+
+   <div class="col-md-4">
       <div id="square">
         <div class="bg-orange">
           <h1 class="text-white d-flex justify-content-center">Günün Fırsatı</h1>
@@ -51,13 +55,13 @@
             </div>
           </div>
       </div>
-      <!-- icon eklenecek -->
-      <div class="draw-dotted-rectangle mt-3">
-        100 TL üzeri kargo bedava!
-      </div>
+  <!-- icon eklenecek -->
+  <div class="draw-dotted-rectangle mt-3">
+    100 TL üzeri kargo bedava!
+  </div>
 
-      <div>
-        <!--  Küçük Menü -->
+  <div>
+    <!--  Küçük Menü -->
         <ngb-carousel class="mt-3 h-10" id="carousel1">
           <ng-template ngbSlide>
             <div class="picsum-img-wrapper">
@@ -73,11 +77,31 @@
             <div class="picsum-img-wrapper">
               <img src="../../../../../assets/carousel/6.jpg">
             </div>
-          </ng-template>
-        </ngb-carousel>
+          </ng-template>   
+          </ngb-carousel>
+  
+        </div>
+        </div>
+    <br/>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <img src="../../../../../assets/images/sağ.jpg">
+        </div>
+
+        <div class="col-md-6">
+          <img src="../../../../../assets/images/sol.jpg">
+        </div>
+
       </div>
-    </div>
-  </div>
-
-
-
+     
+      <div class="row">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide><img src="../../../../../assets/images/sol.jpg" alt=""></ng-template>  
+        <ng-template carouselSlide><img src="../../../../../assets/images/sağ.jpg" alt=""></ng-template>  
+        <ng-template carouselSlide><img src="../../../../../assets/images/sol.jpg" alt=""></ng-template>  
+      </owl-carousel-o>
+      </div>
+     
+ 
