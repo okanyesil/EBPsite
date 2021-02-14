@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import {BookService} from '../../services/book.service';
+import {IBookModel} from '../../models/book.model';
+import {Observable} from 'rxjs';
 @Component({
   selector: 'app-main-page-container',
   templateUrl: './main-page-container.component.html',
   styleUrls: ['./main-page-container.component.scss']
 })
 export class MainPageContainerComponent implements OnInit {
-
+  bookInfo$: Observable<IBookModel[]>;
 
   customOptions: OwlOptions  = {
     loop: true,
@@ -31,11 +34,12 @@ export class MainPageContainerComponent implements OnInit {
       }
     },
     nav: true
-  }
+  };
 
-  constructor() { }
+  constructor(private bookService: BookService) { }
 
   ngOnInit(): void {
+    this.bookInfo$ = this.bookService.getBooks();
   }
 
 }
