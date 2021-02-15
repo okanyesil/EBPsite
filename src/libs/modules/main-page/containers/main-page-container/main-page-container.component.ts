@@ -3,6 +3,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import {BookService} from '../../services/book.service';
 import {IBookModel} from '../../models/book.model';
 import {Observable} from 'rxjs';
+import { EbpService } from '../../services/ebp.service';
+import { BookBestSellerService } from '../../services/book-best-seller.service';
 @Component({
   selector: 'app-main-page-container',
   templateUrl: './main-page-container.component.html',
@@ -10,6 +12,8 @@ import {Observable} from 'rxjs';
 })
 export class MainPageContainerComponent implements OnInit {
   bookInfo$: Observable<IBookModel[]>;
+  ebpInfo$:Observable<IBookModel[]>;
+  bestInfo$:Observable<IBookModel[]>;
 
   customOptions: OwlOptions  = {
     loop: true,
@@ -36,10 +40,12 @@ export class MainPageContainerComponent implements OnInit {
     nav: true
   };
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService,private ebpSecilen:EbpService,private bookBest: BookBestSellerService) { }
 
   ngOnInit(): void {
     this.bookInfo$ = this.bookService.getBooks();
+    this.ebpInfo$=this.ebpSecilen.getBooks();
+    this.bestInfo$=this.bookBest.getBooks();
   }
 
 }

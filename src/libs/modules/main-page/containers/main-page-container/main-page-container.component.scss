@@ -72,15 +72,17 @@
 }
 
 ::ng-deep .owl-next {
-  background-color: #ffff;
+  background-color: #ff9706;
   margin: 0!important;
   padding: 0!important;
   background-image: url("src/assets/icon/next.svg")!important;
 }
 ::ng-deep .owl-prev {
-  background-color: #ffff;
+  background-color: #ff9706;
   margin: 0!important;
   padding: 0!important;
+  top: 5px;;
+  right:0px;
   background-image: url("src/assets/icon/next.svg")!important;
 }
 ::ng-deep .owl-dot  {

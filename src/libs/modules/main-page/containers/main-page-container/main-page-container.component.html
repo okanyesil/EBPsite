@@ -196,20 +196,8 @@
 <div class="container">
   <div class="yeniCikanBaslik"><div class="blueRectangle"></div><strong>EBP'nin Seçtikleri</strong></div>
   <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
+    <ng-template *ngFor="let ebp of ebpInfo$ | async" carouselSlide>
+      <app-yeni-kitap [bookInfo]="ebp" ></app-yeni-kitap>
     </ng-template>
   </owl-carousel-o>
 </div>
@@ -222,21 +210,10 @@
 <div class="container">
   <div class="yeniCikanBaslik"><div class="orangeRectangle"></div><strong>Çok Satan Kitaplar</strong></div>
   <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
+    <ng-template  *ngFor="let best of bestInfo$ | async"carouselSlide>
+      <app-yeni-kitap [bookInfo]="best" ></app-yeni-kitap>
     </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
+    
   </owl-carousel-o>
 </div>
 
