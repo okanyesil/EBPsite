@@ -9,6 +9,7 @@ import {NavbarContainerComponent} from '../navbar/containers/navbar-container/na
 import { BookCardComponent } from './components/book-card/book-card.component';
 import { YeniKitapComponent } from './components/yeni-kitap/yeni-kitap.component';
 import {AngularFireStorageModule} from '@angular/fire/storage';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [MainPageContainerComponent, NavbarContainerComponent, BookCardComponent, YeniKitapComponent],
@@ -17,7 +18,8 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
     MainPageRoutingModule,
     NgbCarouselModule,
     CarouselModule ,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    MatSnackBarModule
   ]
 })
 export class MainPageModule { }
