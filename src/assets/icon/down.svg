@@ -1,11 +1,1 @@
-<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-
- <g>
-  <title>background</title>
-  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
- </g>
- <g>
-  <title>Layer 1</title>
-  <polygon stroke="#ff0000" fill="none" id="svg_2" points="29.99799919128418,16.438140034675598 22.30920876475875,16.438140034675598 22.30920876475875,2.8762800693511963 10.772176213128887,2.8762800693511963 10.772176213128887,16.438140034675598 3.081462789084867,16.438140034675598 16.540211624963604,30 "/>
- </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g><title>background</title><rect id="canvas_background" width="582" height="402" x="-1" y="-1" fill="none"/></g><g><title>Layer 1</title><polygon id="svg_2" fill="none" stroke="red" points="29.998 16.438 22.309 16.438 22.309 2.876 10.772 2.876 10.772 16.438 3.081 16.438 16.54 30"/></g></svg>
