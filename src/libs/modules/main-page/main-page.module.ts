@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { MainPageRoutingModule } from './main-page-routing.module';
 import { MainPageContainerComponent } from './containers/main-page-container/main-page-container.component';
-import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbCarouselModule, NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {NavbarContainerComponent} from '../navbar/containers/navbar-container/navbar-container.component';
 import { BookCardComponent } from './components/book-card/book-card.component';
 import { YeniKitapComponent } from './components/yeni-kitap/yeni-kitap.component';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [MainPageContainerComponent, NavbarContainerComponent, BookCardComponent, YeniKitapComponent],
@@ -17,9 +18,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     CommonModule,
     MainPageRoutingModule,
     NgbCarouselModule,
-    CarouselModule ,
+    CarouselModule,
     AngularFireStorageModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule,
+    NgbNavModule
   ]
 })
 export class MainPageModule { }

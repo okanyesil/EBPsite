@@ -1,1 +1,78 @@
-<p>navbar-container works!</p>
+<div class="ebpNav">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="./assets/icon/logo.PNG" alt="logo">
+      </div>
+      <div class="col-md-4">
+        <div class="fakeInput">Buraya input gelcek</div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-end">
+        <button class="girisButton btn  mr-3" (click)="open(content)">
+          <strong>Giriş Yap</strong>
+          <div>veya Üye Ol</div>
+        </button>
+        <button class="btn girisButton ml-3" routerLink="sepetim">Sepet</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Kitap <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Çocuk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Eğitim</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</div>
+
+<!-- Giriş Yapma ve Yeni kullanıcı oluşturmaya yarayan open model -->
+<ng-template #content let-modal>
+  <div>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-6">
+        <form [formGroup]="signInForm">
+          <h1><strong>Hesabınızda Oturum Açın</strong></h1>
+          <label>E-posta</label>
+          <input class="form-control" formControlName="email">
+          <label>Şifre</label>
+          <input class="form-control" formControlName="password">
+          <button class="btn btn-outline-info" [disabled]="signInForm.invalid" (click)="signIn()">Giriş</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <form [formGroup]="signUpForm">
+          <h1><strong>Yeni Üyelik</strong></h1>
+          <label>İsim Soyisim</label>
+          <input class="form-control" formControlName="name">
+          <label>E-posta</label>
+          <input class="form-control" formControlName="email">
+          <label>Şifre</label>
+          <input class="form-control" formControlName="password">
+          <label>Şifre Tekrarı</label>
+          <input class="form-control">
+          <button class="btn btn-outline-info" (click)="signUp()">Üyeliği Tamamla</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+

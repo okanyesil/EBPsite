@@ -1,0 +1,40 @@
+.fakeImage {
+  background-color: gray;
+  height: 150px;
+  width: 200px;
+}
+
+
+.ebpNav {
+  height: 200px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px 10px gray;
+  margin-bottom: 50px;
+}
+.girisButton::before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+.girisButton {
+  background-color: #f8f8f8;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  margin-top: 15%;
+  line-height: 14px;
+  height: 44px;
+  width: 100px;
+}
+
+.girisButton:hover {
+  background-color: orange;
+}
+
+.fakeInput {
+  text-align: center;
+  margin-top: 15%;
+}
+
+
