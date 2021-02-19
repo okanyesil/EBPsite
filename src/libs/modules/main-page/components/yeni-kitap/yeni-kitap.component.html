@@ -1,0 +1,21 @@
+<div class="card mx-3" >
+  <div>
+    <img class="card-img-top" src="{{bookInfo.bookImage}}" alt="Card image cap">
+    <div class="bookmark">
+      <img src="assets/icon/bookmark.svg">
+    </div>
+  </div>
+  <div class="card-body">
+    <h2 class="card-title">{{bookInfo.bookName}}</h2>
+    <p class="author">{{bookInfo.author}}</p>
+    <p>{{bookInfo.publisher}}</p>
+    <div class="card-text">
+      <a (click)="deneme(bookInfo)" class="btn d-block">Sepete Ekle</a>
+      <span class="putInfrontOfImg float-left">%{{discountPercentega}}</span>
+    <span class="float-right">
+        <del class="d-block">{{bookInfo.oldPrice}} &#8378;</del>
+        <strong>{{bookInfo.price}} &#8378;</strong>
+      </span>
+    </div>
+  </div>
+</div>

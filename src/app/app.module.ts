@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 @NgModule({
@@ -18,6 +19,8 @@ import {environment} from '../environments/environment';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
+    CarouselModule ,
+  
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
