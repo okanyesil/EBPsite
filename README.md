@@ -1,27 +1,44 @@
 # EBPsiteApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.10.
+EBP site kodluyoruz için geliştirdiğimiz Kidega.coum'un klonu niteliğinde bir uygulamadır.
 
-## Development server
+## Proje Arkadaşlarım
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ - Esmanur KARACA [Github Profil](https://github.com/esmanurkaraca)
+ - İmran AYKUT [Github Profil](https://github.com/imrn1)
+ - Fatma Nur Arslan [Github Profil](https://github.com/NurArslann)
+ - Erdoğan Ersin KESKIN [Github Profil](https://github.com/erdoganersinkeskin)
 
-## Code scaffolding
+## Projeyi Çalıştırmak için
+ Bilgisayarınızda;
+  - NodeJs
+  - Angular CLI olduğundan emin olun.
+  Ardından ``ng serve`` ile projeyi çalıştırabilirsiniz.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Kullanılan Araçlar
 
-## Build
+  - Angular Fire(Auth ve firestore)
+  - Ng Bootstrap
+  - Angular Material
+  - Bootstrap
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Projeye ait resimler
+- Navbar
 
-## Running unit tests
+![navbar](src/assets/projeye%20ait%20resimler/navbar.PNG)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Kullanıcı Girişi
 
-## Running end-to-end tests
+![kullanıcı](src/assets/projeye%20ait%20resimler/kullanıcı%20girişi.PNG)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Carousel
 
-## Further help
+![caraousel](src/assets/projeye%20ait%20resimler/slider.PNG)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Yetkisi kullanıcı kitap ekleme
+
+![yetkisiz](src/assets/projeye%20ait%20resimler/hatalı%20giriş.PNG)
+
+- Yetkili Kullanıcı
+
+![yetkili](src/assets/projeye%20ait%20resimler/başarılı%20sepete%20ekleme.PNG)
