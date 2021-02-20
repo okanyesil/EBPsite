@@ -25,7 +25,8 @@
   margin-top: 15%;
   line-height: 14px;
   height: 44px;
-  width: 100px;
+  width: 120px;
+  border: 1px solid gray;
 }
 
 .girisButton:hover {
@@ -33,8 +34,35 @@
 }
 
 .fakeInput {
-  text-align: center;
-  margin-top: 15%;
+  margin-top: 12%;
+  width: auto;
+}
+.name {
+  display: block;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 12.6px;
+}
+.nav-link {
+  font-size: 15px;
+  color: black!important;
+  padding: 10px!important;
+  font-weight: bold;
 }
 
-
+.custom-search {
+  position: relative;
+}
+.custom-search-input {
+  width: 100%;
+  padding-right: 100px !important;
+  box-sizing: border-box;
+}
+.custom-search-button {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  line-height: 1 !important;
+  z-index: 4;
+  background-color: orange;
+}

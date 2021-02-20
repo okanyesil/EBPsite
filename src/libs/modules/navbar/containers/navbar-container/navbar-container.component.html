@@ -4,33 +4,63 @@
       <div class="col-md-3">
         <img src="./assets/icon/logo.PNG" alt="logo">
       </div>
-      <div class="col-md-4">
-        <div class="fakeInput">Buraya input gelcek</div>
+      <div class="col-md-5">
+        <div class="input-group custom-search fakeInput d-flex justify-content-end">
+          <input type="text" class="form-control custom-search-input" placeholder="Kitap/ Yazar/ Yayınevi Ara">
+          <button class="btn custom-search-button" type="submit">Ara</button>
+        </div>
       </div>
       <div class="col-md-4 d-flex justify-content-end">
-        <button class="girisButton btn  mr-3" (click)="open(content)">
-          <strong>Giriş Yap</strong>
-          <div>veya Üye Ol</div>
+        <button class="girisButton btn  mr-3" (click)="logOut()" *ngIf="auth.user | async; else showUserInfo">
+          <strong>Hesabım</strong>
+         <span class="name">{{userInfo.name}} {{userInfo.lastName}}</span>
         </button>
-        <button class="btn girisButton ml-3" routerLink="sepetim">Sepet</button>
+        <ng-template  #showUserInfo >
+          <button class="girisButton btn  mr-3" (click)="open(content)" >
+            <strong>Giriş Yap</strong>
+            <div>veya Üye Ol</div>
+          </button>
+        </ng-template>
+        <button class="btn girisButton ml-3" routerLink="sepetim" [disabled]="!(auth.user | async)">Sepet</button>
       </div>
     </div>
   </div>
-
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Kitap <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">KİTAP <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Çocuk</a>
+          <a class="nav-link" href="#">ÇOCUK</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Eğitim</a>
+          <a class="nav-link" href="#">EĞİTİM</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">HOBİ & KIRTASİYE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">DÜNYA KAHVELERİ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ÇOK SATANLAR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">AYNI GÜN KARGO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">KAMPANYALAR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">YENİ ÇIKANLAR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">E-KİTAP</a>
         </li>
       </ul>
     </div>
@@ -62,12 +92,12 @@
           <h1><strong>Yeni Üyelik</strong></h1>
           <label>İsim Soyisim</label>
           <input class="form-control" formControlName="name">
+          <label> Soyisim</label>
+          <input class="form-control" formControlName="lastName">
           <label>E-posta</label>
           <input class="form-control" formControlName="email">
           <label>Şifre</label>
           <input class="form-control" formControlName="password">
-          <label>Şifre Tekrarı</label>
-          <input class="form-control">
           <button class="btn btn-outline-info" (click)="signUp()">Üyeliği Tamamla</button>
         </form>
       </div>

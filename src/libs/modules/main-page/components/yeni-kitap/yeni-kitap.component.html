@@ -10,7 +10,7 @@
     <p class="author">{{bookInfo.author}}</p>
     <p>{{bookInfo.publisher}}</p>
     <div class="card-text">
-      <a (click)="deneme(bookInfo)" class="btn d-block">Sepete Ekle</a>
+      <a (click)="addToCart(bookInfo)" class="btn d-block">Sepete Ekle</a>
       <span class="putInfrontOfImg float-left">%{{discountPercentega}}</span>
     <span class="float-right">
         <del class="d-block">{{bookInfo.oldPrice}} &#8378;</del>
