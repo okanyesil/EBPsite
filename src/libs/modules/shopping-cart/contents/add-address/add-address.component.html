@@ -1,0 +1,60 @@
+<div class="container">
+
+    <form [formGroup]="addressForm">
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Adres Başlığı</mat-label>
+            <input matInput type="text" formControlName="addressTitle">
+        </mat-form-field>
+         
+        <mat-form-field appearance="outline">
+            <mat-label>Şehir</mat-label>
+            <input matInput type="text" autocomplete="false" formControlName="city" 
+            [matAutocomplete]="auto" placeholder="Pick one">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>İlçe</mat-label>
+            <input matInput type="text" formControlName="state">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Adres</mat-label>
+            <input matInput type="text" formControlName="address">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Ad Soyad</mat-label>
+            <input matInput type="text" formControlName="name">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Cep Telefonu</mat-label>
+            <input matInput type="tel" formControlName="mobilePhone">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>ev Telefonu</mat-label>
+            <input matInput type="tel" formControlName="homePhone">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Fatura Tipi</mat-label>
+            <input matInput type="tel" formControlName="billType">
+        </mat-form-field>
+    
+        <!-- <button type="button" (click)="save()">Save and close</button>
+        <button type="button" (click)="close()">Close</button> -->
+    
+    
+    </form>
+
+    
+    </div>
+    

@@ -1,0 +1,91 @@
+
+<div class="container">
+
+    <div class="row">
+      <div class="col">
+        <h3>Sepetim</h3>
+      </div>
+    </div>
+
+    <table mat-table  [dataSource]="Books"   class="mat-elevation-z8">
+      
+        <!-- book Column -->
+        <ng-container matColumnDef="book">
+          <th mat-header-cell *matHeaderCellDef class="col1"> Ürünler </th>
+          <td mat-cell *matCellDef="let element" class="col1">  
+            <div class="row">
+              <div class="col-md-3 ">
+                <img src={{element.bookImage}} width="100%" height="auto" alt="">
+              </div>
+              <div class="col-9 ">
+                <div>{{element.bookName}}</div>
+                <div>{{element.author}}</div>
+                <div>{{element.publisher}}</div>
+              </div>
+            </div>
+          </td>
+        </ng-container>
+      
+        <!-- count Column -->
+        <ng-container matColumnDef="count">
+          <th mat-header-cell *matHeaderCellDef class="col2"> Adet </th>
+          <td mat-cell *matCellDef="let element" class="col2"> 
+          
+            
+              <div class="count-container">  
+                <div class="column"> 
+                  
+                  <div class="input-group">
+                    <button type="button" class="btn btn-light left" (click)="changeCount(element.bookName,element.count-1)"> 
+                        <mat-icon> remove </mat-icon>
+                    </button>
+                    
+                    <div class="count">
+                        <p>
+                          {{element.count}} 
+                        </p>
+                    </div> 
+                    
+                    <button type="button" class="btn btn-light right" (click)="changeCount(element.bookName,element.count+1)"> 
+                        <mat-icon> add </mat-icon>
+                    </button>
+                </div>
+
+                </div>
+              
+                
+                  <div class="discount-container" [ngStyle]="{'visibility':element.discountPercentage==0 ? 'hidden':'visible'}">
+                    <div class="icon">
+                        <mat-icon>arrow_downward</mat-icon> 
+                    </div>
+                    <div class="discount">
+                        %{{element.discountPercentage}}
+                    </div>
+                  </div>
+    
+                
+              </div>
+          
+          </td>
+         
+        </ng-container>
+      
+        <!-- price Column -->
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef class="col3"> Fiyat </th>
+          <td mat-cell *matCellDef="let element" class="col3"> 
+          <p>
+            <span style="text-decoration:line-through;color: gray;"> {{element.oldPrice*element.count}}₺ </span>
+            <br> <span style="font-size: x-large;"> {{element.price*element.count}}₺ </span>
+          </p>
+            
+          </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+  </div>
+  
+  

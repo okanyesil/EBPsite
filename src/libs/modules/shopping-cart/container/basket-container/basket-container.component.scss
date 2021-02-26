@@ -1,0 +1,142 @@
+::ng-deep .mat-horizontal-stepper-header-container {
+    background-color: orange;
+    height: 160px;
+
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+::ng-deep .mat-step-text-label {
+    color:white;
+}  
+
+
+//  **********  stepper-header içindeki çizgiler  ***********   //
+::ng-deep .mat-stepper-horizontal-line{
+  max-width: 100px;
+}//       
+
+::ng-deep .mat-stepper-horizontal-line.ng-tns-c135-0.ng-star-inserted{
+          
+  top: 46px!important;
+  // border: 1px solid red; 
+}
+::ng-deep mat-step-header.mat-step-header.mat-focus-indicator.mat-horizontal-stepper-header.ng-tns-c134-0.ng-star-inserted::before{
+  top: 46px!important;
+  // border: 1px solid gray; 
+}
+::ng-deep mat-step-header#cdk-step-label-0-1::after{
+  top: 46px!important;
+  // border: 1px solid gray; 
+}
+::ng-deep mat-step-header#cdk-step-label-0-0::after{
+  top: 46px!important;
+  // border: 1px solid gray; 
+}
+::ng-deep mat-step-header#cdk-step-label-0-2::after{
+  top: 46px!important;
+  //border: 1px solid red;
+}
+::ng-deep mat-step-header#cdk-step-label-0-1::before{
+  top: 46px!important;
+  // border: 1px solid red; 
+}
+::ng-deep mat-step-header#cdk-step-label-0-2::before{
+  top: 46px!important;
+  // border: 1px solid red; 
+}
+::ng-deep mat-step-header#cdk-step-label-0-3::before{
+  top: 46px!important;
+   //border: 1px solid red; 
+}
+::ng-deep .mat-stepper-horizontal-line{
+  top: 46px!important;
+}
+
+//  **********************   //
+
+
+
+//   ****  .mat-step-icon  ******   // 
+::ng-deep .mat-horizontal-stepper-header .mat-step-icon{
+  width: 50px;
+  height: 50px;
+ // background-color: gray;
+}
+::ng-deep .mat-step-header .mat-step-icon{
+  background-color: rgb(100, 99, 99);
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected{
+  background-color: black;
+}
+::ng-deep .mat-step-header .mat-step-icon-state-done{
+   background-color: rgb(100, 99, 99);
+}
+// ******************************** // 
+ 
+.kargo-info{
+  // background-color: white;
+  width: 100%;
+  margin: 2%;
+  padding: 1%;
+  border:1px solid orange;
+  border-left: 5px solid orange;
+}
+.kampanya{
+  display: flex;
+  // background-color: white;
+  width: 100%;
+  margin: 2%;
+  padding: 1%;
+  border:1px solid orange;
+  border-left: 5px solid orange;
+}
+.kampanya-img{
+  background-color: palegreen;
+  width: 100px;
+  margin-left: 1%;
+}
+
+.basket-box{
+ 
+   width: 20%;
+  // height: 100%;
+  // background-color: palevioletred;
+  position: fixed;
+  top: 30%;
+  right: 1%;
+  margin-top: -100px; /* Negative half of height. */
+  margin-left: -100px;
+  
+  margin: 0px;
+  padding: 0px;
+
+  .sticky-box{
+    // width: 100%;
+      position: sticky;
+      top: 0px;
+      left: 0px;
+    //  background-color: rgb(230, 137, 45);
+      
+  }
+}
+
+.basket-btns{
+  padding: 0 15px;
+  margin-top: 3%;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+
+  button{
+    background-color:orange;
+    // padding: 1%;
+    text-align: center;
+    color: white;
+    width: 40%;
+  }
+}
+
+

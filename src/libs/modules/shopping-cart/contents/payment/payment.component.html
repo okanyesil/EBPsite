@@ -1,0 +1,153 @@
+<div class="container">
+
+    <mat-tab-group mat-align-tabs="start">
+
+        <mat-tab label=" Kredi Kartı / Banka Kartı"> 
+            
+                <form [formGroup]="creditCardInfo">
+                    <div class="row">
+                        <div class="col-3">Kart Numarası</div>
+                        <div class="col-9">
+                            <input formControlName="cardNo" type="password" placeholder="**** **** **** ****">
+                        </div>           
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Kart Üzerindeki İsim</div>
+                        <div class="col-9">
+                            <input formControlName="cardName" type="text" >
+                        </div>           
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Son Kullanma Tarihi</div>
+                        <div class="col-9">
+                            <input formControlName="expirationDate" type="text" placeholder="AA/YY" >
+                        </div>           
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Güvenlik Kodu</div>
+                        <div class="col-9">
+                            <input formControlName="securityCode" type="text" placeholder="AA/YY" >
+                        </div>           
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" formControlName="Secure3D">  <span style="font-weight: bold; "> 3D Secure kullanmak istiyorum.</span>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="form-container">
+                    <h3>Ön Bilgilendirme Formu</h3>
+                    <div class="form-text">
+                        <p>
+                            ÖN BİLGİLENDİRME FORMU <br>
+
+MADDE 1: TARAFLAR VE KONU
+İşbu Ön Bilgilendirme Formu’nun konusu www.kidega.com internet sitesi veya Kidega Mobil Uygulaması üzerinden dijital içerik ve/veya sair ürün/ürünler satın alacak aşağıda bilgileri belirtilen kişi (“ALICI”) ile İkitelli OSB Mah. Eski Turgut Özal Cad. M.Çakıcı İş Mer. No: 17/501 34490 Başakşehir, İstanbul adresinde mukim Kidega Elektronik Ticaret ve Yayıncılık Anonim Şirketi  ("SATICI") arasındaki mesafeli sözleşmeye ilişkin tüketicilerin, 6502 sayılı Tüketicilerin Korunması Hakkındaki Kanun ve Mesafeli Sözleşmeler Yönetmeliği hükümleri uyarınca bilgilendirilmesinden ibarettir. İşbu Ön Bilgilendirme Formu, Kullanıcı’nın www.kidega.com sitesinde veya Kidega Mobil uygulamasında (“Kidega”) işbu Formu okuduğunu ve kabul ettiğini belirten kısmı elektronik olarak işaretlemesi ile kurulur. İşbu Ön Bilgilendirme Formu, SATICI tarafından muhafaza edilecek olup, ALICI tarafından her zaman Kidega web sitesinden veya uygulamasından ulaşılabilir olacaktır. SATICI, Sözleşme’nin kurulmasını takiben Sözleşme hüküm ve koşullarını elektronik posta yoluyla ALICI’ya iletilecektir.
+
+1.1. SATICI BİLGİLERİ
+Ünvanı : Kidega Elektronik Ticaret ve Yayıncılık Anonim Şirketi 
+Adresi : İkitelli OSB Mah. Eski Turgut Özal Cad. M.Çakıcı İş Mer. No: 17/501 34490 Başakşehir, İstanbul
+Telefon : +90 212 293 0959
+Eposta adresi : info@kidega.com Mersis Numarası: 0562074455400001
+
+1.2 ALICI BİLGİLERİ
+Adı/Soyadı/Ünvanı : imran aykut
+Adresi : 100. Yıl mah. 1010. Cadde özzülfikar yapı apt kat 7 daire 9
+Telefon : (535)-787-54-78
+Email : imran1aykut@gmail.com
+MADDE 3: SATIŞA KONU ÜRÜNÜN ÖZELLİKLERİ
+3.1. ÜRÜNLER
+Ürünlerin adı, adedi, cinsi ve türü, birim ve toplam satış fiyatı bilgileri aşağıdaki gibi olup söz konusu ürünler ALICI tarafından da onaylanmıştır:
+Ürün Adı ve Temel Nitelikleri	Adet	Satış Bedeli
+(KDV dahil toplam Türk Lirası)	Vadeli Satış Bedeli
+(KDV dahil toplam)
+Kan Ter ve Pikseller: Video Oyun Yapımcılığının Arkasındaki Çalkantılı ve Zafer Dolu Hikayeler	1	18,70 ₺	18,70 ₺
+Listelenen ve sitede ilan edilen fiyatlar satış fiyatıdır. İlan edilen fiyatlar ve vaatler güncelleme yapılana ve değiştirilene kadar geçerlidir. Süreli olarak ilan edilen fiyatlar ise belirtilen süre sonuna kadar geçerlidir. Sözleşme Konusu mal ya da hizmetin tüm vergileri satış fiyatına dahildir.
+3.2. TESLİMAT ŞEKLİ VE PLANI
+Toplam Sipariş Tutarı : 28,60 ₺
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <h3>MESAFELİ SATIŞ SÖZLEŞMESİ</h3>
+                    <div class="form-text">
+                        <p>
+                            
+                            MESAFELİ SATIŞ SÖZLEŞMESİ  <br>
+
+                            MADDE 1- TARAFLAR
+                            
+                            1.1. SATICI BİLGİLERİ:
+                            Ünvanı : Kidega Elektronik Ticaret ve Yayıncılık Anonim Şirketi 
+                            Adresi : İkitelli OSB Mah. Eski Turgut Özal Cad. M.Çakıcı İş Mer. No: 17/501 34490 Başakşehir, İstanbul
+                            Telefon : +90 212 293 0959
+                            Eposta adresi : info@kidega.com
+                            Mersis Numarası: 0562074455400001
+                            
+                            1.2. ALICI
+                            Adı/Soyadı/Ünvanı : imran aykut
+                            Adresi : 100. yıl Mahallesi Mh. 1010. Caddesi Cd. 100. Yıl mah. 1010. Cadde özzülfikar yapı apt kat 7 daire 9 / KARABÜK / MERKEZ
+                            Telefon : (535)-787-54-78
+                            Email : imran1aykut@gmail.com
+                            
+                            MADDE 2- KONU
+                            2.1. İşbu sözleşmenin konusu, ALICI'nın SATICI'ya ait www.kidega.com internet sitesi veya Kidega Mobil Uygulaması üzerinden elektronik ortamda siparişini yaptığı aşağıda nitelikleri ve toplam satış fiyatı belirtilen ürünün satışı ve teslimi ile ilgili olarak 4077 sayılı Tüketicilerin Korunması Hakkındaki Kanun ve 27.11.2014 tarihli Mesafeli Sözleşmeler yönetmeliği hükümleri gereğince tarafların hak ve yükümlülüklerinin belirlenmesidir.
+                            2.2. İşbu sözleşme, Kullanıcı’nın www.kidega.com sitesinde veya Kidega Mobil uygulamasında (“Kidega”) işbu sözleşmeyi okuduğunu ve kabul ettiğini belirten kısmı elektronik olarak işaretlemesi ile kurulur.  
+                            2.3. SATICI, İşbu Sözleşme’nin kurulmasını takiben ALICI’ya elektronik posta yolu ile Sözleşme hüküm ve koşullarını iletecektir. Sözleşme, SATICI tarafından da muhafaza edilecek olup, Kullanıcı tarafından her zaman Kidega web sitesinden veya uygulamasından veya Satış Sözleşmesi linkinden ulaşılabilir olacaktır.
+                            
+                            MADDE 3: SATIŞA KONU ÜRÜNÜN ÖZELLİKLERİ
+                            3.1. ÜRÜNLER
+                            Ürün Adı ve Temel Nitelikleri	Adet	Satış Bedeli
+                            (KDV dahil toplam Türk Lirası)	Vadeli Satış Bedeli
+                            (KDV dahil toplam)
+                            Kan Ter ve Pikseller: Video Oyun Yapımcılığının Arkasındaki Çalkantılı ve Zafer Dolu Hikayeler	1	18,70 ₺	18,70 ₺
+                            Listelenen ve sitede ilan edilen fiyatlar satış fiyatıdır. İlan edilen fiyatlar ve vaatler güncelleme yapılana ve değiştirilene kadar geçerlidir. Süreli olarak ilan edilen fiyatlar ise belirtilen süre sonuna kadar geçerlidir. Sözleşme Konusu mal ya da hizmetin tüm vergileri satış fiyatına dahildir.
+                            3.2. TESLİMAT ŞEKLİ VE PLANI
+                            Kargo Ücreti : 9,90 ₺
+                            Toplam Sipariş Tutarı : 28,60 ₺
+                            Ödeme Şekli : Kredi Kartı / 
+
+                        </p>
+                    </div>
+                </div>
+
+            
+        </mat-tab>
+        
+        <mat-tab label="Havale / EFT">
+            
+            <div class="row">
+                <div class="col-3">
+                    <img src="../../../../../assets/images/logo-halkbank.png" alt="">
+                </div>
+                <div class="col-9 IBAN">
+                    IBAN: TR03 0001 2009 4130 0010 2606 85 <br>
+                    Kidega Elektronik Ticaret ve Yayıncılık A.Ş. <br>
+                    HALKBANK Opera / Ankara Şubesi, Şube Kodu: 413, <br>
+                    Hesap No: 10260685
+                </div>
+            </div>
+
+            <div>
+               <h3> Şu noktalara dikkatinizi çekmek isteriz:</h3>
+                • Havale/EFT’yi gerçekleştirirken açıklama kısmında mutlaka sipariş numarası belirtilmelidir. <br>
+                • EFT işlemlerinde alıcı olarak "Kidega Elektronik Ticaret ve Yayıncılık A.Ş." yazılması gereklidir. Onaylamadan önce kontrol etmenizi öneririz.<br>
+                • 2 iş günü içinde ödemesi gerçekleşmeyen siparişler otomatik olarak iptal edilmektedir. 
+               <h3> Siparişim ne zaman onaylanır?</h3>
+                • Ödeme sonrası siparişiniz 1 iş günü içinde onaylanır.<br>
+                • ATM'lerden yapılan ödemelerde açıklama eklenemediğinden ödeme onayı daha uzun zaman almaktadır. Süreci hızlandırmak için dekontunuzu sipariş numarasıyla birlikte  destek@kidega.com e-posta adresine gönderebilirsiniz.<br>
+
+            </div>
+        
+        </mat-tab>
+        
+        <mat-tab label=" Kapıda Ödeme">  Kapıda Ödeme </mat-tab>
+
+    </mat-tab-group>
+
+
+</div>

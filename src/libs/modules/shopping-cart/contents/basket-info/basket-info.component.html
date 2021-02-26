@@ -1,0 +1,11 @@
+
+<div class="info-container">
+
+    <ul class="list-group">
+        <li class="list-group-item"> <h3>Sipariş Toplamı</h3> </li>
+        <li class="list-group-item">Sepetinizde toplam {{basketContent.productCount}} ürün var.</li>
+        <li class="list-group-item" *ngIf="basketContent.productCount != 0">Sipariş Tutarı <span class="space"> {{basketContent.totalPrice}} ₺ </span></li>
+        <!-- <li class="list-group-item">Kargo Tutarı 0₺</li> -->
+    </ul>
+
+</div>
