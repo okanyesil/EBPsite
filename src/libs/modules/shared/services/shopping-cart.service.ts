@@ -85,17 +85,5 @@ export class ShoppingCartService {
 
 
 
-  //yapıldı
-  // deleteAnItemFromShoppingCart(bookName:string,count:number) {
-  //   return;
-  
-  // }
-
-  // updateCountOfItemFromShoppingCart() {
-  //   return;
-  // }
-  // addItemToShoppingCart(){
-  //   return this.firestore.doc('sho').valueChanges();
-  // }
   
 }
