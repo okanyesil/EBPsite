@@ -5,6 +5,7 @@ import {IBookModel} from '../../models/book.model';
 import {Observable} from 'rxjs';
 import { EbpService } from '../../services/ebp.service';
 import { BookBestSellerService } from '../../services/book-best-seller.service';
+import { SanaSpecialService } from '../../services/sana-special.service';
 @Component({
   selector: 'app-main-page-container',
   templateUrl: './main-page-container.component.html',
@@ -14,6 +15,7 @@ export class MainPageContainerComponent implements OnInit {
   bookInfo$: Observable<IBookModel[]>;
   ebpInfo$:Observable<IBookModel[]>;
   bestInfo$:Observable<IBookModel[]>;
+  sanaInfo$:Observable<IBookModel[]>;
 
   customOptions: OwlOptions  = {
     loop: true,
@@ -40,12 +42,13 @@ export class MainPageContainerComponent implements OnInit {
     nav: true
   };
 
-  constructor(private bookService: BookService,private ebpSecilen:EbpService,private bookBest: BookBestSellerService) { }
+  constructor(private bookService: BookService,private ebpSecilen:EbpService,private bookBest: BookBestSellerService,private sanaa:SanaSpecialService) { }
 
   ngOnInit(): void {
     this.bookInfo$ = this.bookService.getBooks();
     this.ebpInfo$=this.ebpSecilen.getBooks();
     this.bestInfo$=this.bookBest.getBooks();
+    this.sanaInfo$=this.sanaa.getBooks()
   }
 
 }

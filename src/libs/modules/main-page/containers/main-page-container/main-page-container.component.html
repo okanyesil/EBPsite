@@ -101,24 +101,8 @@
 
 <div class="container">
   <owl-carousel-o [options]="customOptions">
-
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
-    </ng-template>
-    <ng-template carouselSlide>
-      <app-book-card></app-book-card>
+    <ng-template *ngFor="let book of sanaInfo$  | async" carouselSlide>
+       <app-yeni-kitap [bookInfo]="book" ></app-yeni-kitap>
     </ng-template>
   </owl-carousel-o>
 </div>
