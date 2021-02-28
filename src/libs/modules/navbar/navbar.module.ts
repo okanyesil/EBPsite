@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarRoutingModule } from './navbar-routing.module';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     CommonModule,
     NavbarRoutingModule,
     AngularFireAuthModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgbDropdownModule
   ]
 })
 export class NavbarModule { }

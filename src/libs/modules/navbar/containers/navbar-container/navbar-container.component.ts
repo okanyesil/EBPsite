@@ -15,6 +15,7 @@ import {AngularFirestore} from '@angular/fire/firestore';
 })
 export class NavbarContainerComponent implements OnInit {
   userInfo: any;
+  error = false;
   signInForm = this.fb.group({
     email: this.fb.control('', [Validators.required, Validators.email]),
     password: this.fb.control('', [Validators.required])
@@ -43,6 +44,7 @@ export class NavbarContainerComponent implements OnInit {
   signIn() {
     this.auth.signInWithEmailAndPassword(this.signInForm.value.email, this.signInForm.value.password)
       .then(() => {
+        this.error = false;
         this.snackbar.open('Giriş Başarılı...', null, {duration: 2000});
         this.getProfile().subscribe(data => {
           this.userInfo = data;
@@ -52,6 +54,7 @@ export class NavbarContainerComponent implements OnInit {
         this.signInForm.reset();
       })
       .catch(() => {
+        this.error = true;
         this.snackbar.open('Bazı hatalar Oluştu...', null, {duration: 2000});
         this.auth.authState.subscribe(console.log);
         this.auth.user.subscribe(data => console.log('user data ' + data));

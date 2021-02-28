@@ -11,14 +11,14 @@ import { Router } from '@angular/router';
 })
 export class BasketContainerComponent implements OnInit {
 
-  
+
   // hediye:string="gift"
   address:boolean=false;
-  basketInfo:{productCount:number,totalPrice:number} = {productCount:0 , totalPrice:0};
+  basketInfo: {productCount:number,totalPrice:number} = {productCount: 0 , totalPrice: 0};
 
 
   isLinear = false;
- 
+
   isEditable = false;
 
   constructor(private router:Router) {}

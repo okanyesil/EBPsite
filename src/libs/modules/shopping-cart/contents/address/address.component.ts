@@ -14,35 +14,35 @@ import { IAddress } from './address.model';
 export class AddressComponent implements OnInit {
   addressForm:IAddress;
 
-  
-  
+
+
 constructor(private addressService:ShoppingCartService,private getBookService:ShoppingCartService,public dialog: MatDialog){
   this.address.next(false)
 }
 subscriptions= new Subscription();
 
-  @Output() 
+  @Output()
   address = new EventEmitter<boolean>();
-  
 
 
-  
+
+
 
   ngOnInit(): void {
     this.getAddresInfo();
-   
+
   }
 
   addressInfo(address:boolean){
     this.address.emit(address);
-    
+
   }
 
   addAddress(){
-    this.openDialog()
-    this.addressInfo(false)
+    this.openDialog();
+    this.addressInfo(false);
   }
-  
+
   openDialog(){
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose=false;
@@ -55,11 +55,11 @@ subscriptions= new Subscription();
         this.getAddresInfo()
       })
     )
-  } 
+  }
   getAddresInfo(){
     this.subscriptions.add(
       this.addressService.getAddres().subscribe(userData=>{
-        let myAddress:IAddress = userData.data()["address"]   
+        let myAddress:IAddress = userData.data()["address"]
         this.addressForm = myAddress
         // console.log("form:",this.addressForm);
         if(myAddress){
@@ -68,5 +68,5 @@ subscriptions= new Subscription();
       })
     )
   }
-  
+
 }

@@ -11,10 +11,17 @@
         </div>
       </div>
       <div class="col-md-4 d-flex justify-content-end">
-        <button class="girisButton btn  mr-3" (click)="logOut()" *ngIf="auth.user | async; else showUserInfo">
-          <strong>Hesabım</strong>
-         <span class="name">{{userInfo.name}} {{userInfo.lastName}}</span>
-        </button>
+        <div ngbDropdown style="margin-top: 10.5%">
+          <button class="girisButton btn  mr-3" id="dropdownBasic1" ngbDropdownToggle *ngIf="auth.user | async; else showUserInfo">
+            <strong>Hesabım</strong>
+            <span class="name">{{userInfo.name}} {{userInfo.lastName}}</span>
+
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem (click)="logOut()">Çıkış Yap</button>
+          </div>
+        </div>
+
         <ng-template  #showUserInfo >
           <button class="girisButton btn  mr-3" (click)="open(content)" >
             <strong>Giriş Yap</strong>
@@ -70,6 +77,7 @@
 
 <!-- Giriş Yapma ve Yeni kullanıcı oluşturmaya yarayan open model -->
 <ng-template #content let-modal>
+
   <div>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
@@ -78,13 +86,16 @@
   <div class="modal-body">
     <div class="row">
       <div class="col-md-6">
+        <div class="alert alert-danger" *ngIf="error">
+          E-Posta veya Şifre Bilgilerini Kontrol Ediniz.
+        </div>
         <form [formGroup]="signInForm">
           <h1><strong>Hesabınızda Oturum Açın</strong></h1>
           <label>E-posta</label>
           <input class="form-control" formControlName="email">
           <label>Şifre</label>
-          <input class="form-control" formControlName="password">
-          <button class="btn btn-outline-info" [disabled]="signInForm.invalid" (click)="signIn()">Giriş</button>
+          <input class="form-control" type="password" formControlName="password">
+          <button class="btn makeOrange" [disabled]="signInForm.invalid" (click)="signIn()">Giriş</button>
         </form>
       </div>
       <div class="col-md-6">
@@ -97,8 +108,8 @@
           <label>E-posta</label>
           <input class="form-control" formControlName="email">
           <label>Şifre</label>
-          <input class="form-control" formControlName="password">
-          <button class="btn btn-outline-info" (click)="signUp()">Üyeliği Tamamla</button>
+          <input class="form-control" type="password" formControlName="password">
+          <button class="btn makeOrange" (click)="signUp()">Üyeliği Tamamla</button>
         </form>
       </div>
     </div>
