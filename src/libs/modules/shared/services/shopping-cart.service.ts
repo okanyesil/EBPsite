@@ -83,7 +83,23 @@ export class ShoppingCartService {
     )
   }
 
-
+  getAddres(){
+    return this.auth.user.pipe(
+      take(1),
+      switchMap(user=>{
+        return  this.firestore.collection('userProfile').doc(user.uid).get()
+      })
+    ) 
+  }
+  setAddress(addressInfo){
+    this.auth.user.pipe(
+      take(1),
+      switchMap((user)=>{
+        return this.firestore.collection('userProfile').doc(user.uid)
+        .update({address:addressInfo}).then()
+      })
+    ).subscribe()
+  }
 
   
 }

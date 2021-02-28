@@ -3,37 +3,52 @@
         <div class="col">
             <h3>Adres Bilgilerim</h3>
         </div>
-        <div class="col" *ngIf="!isAddress">
-            <button (click)="addAddress()">YENİ ADRES EKLE</button> <!--adres formu gösterilmeli-->
+        <div class="col" >
+            <button mat-button (click)="addAddress()">YENİ ADRES EKLE</button>
+            <!--adres formu gösterilmeli-->
         </div>
 
-        <div class="col"> <!-- deneme amaçlı -->
-            <button (click)="addressBtnClick()">isAddress {{isAddress}}</button>
-        </div>
+
     </div>
 
-    
+
+
+
 
     <div class="row">
-        <div class="col">
-            <h3>Teslimat Adresim</h3>
-        </div>
-        <div class="col">
-            <h3>Fatura Adresim</h3>
-        </div>
-    </div>
-
-    <div class="row">
-        <ng-container *ngIf="isAddress;else: noAddress">
+        <ng-container *ngIf="addressForm;else: noAddress">
             <!-- Teslimat Adresi Formu -->
-            <div class="col">
+            <div class="row w-100">
+                <div class="col">
+                    <div class="alert alert-primary" role="alert">
+                        <h3>Teslimat Adresim</h3>
+                            <p>{{addressForm.addressTitle}}</p>
+                            <p>{{addressForm.city}}</p>
+                            <p>{{addressForm.state}}</p>
+                            <p>{{addressForm.address}}</p>
+                            <p>{{addressForm.name}}</p>
+                            <p>{{addressForm.mobilePhone}}</p>
+                            <p>{{addressForm.homePhone}}</p>
+                            <p>{{addressForm.billType}}</p>
+                    </div>
+                </div>
+                <!-- Fatura Adresi Formu -->
+                <div class="col">
+                    <div class="alert alert-primary" role="alert">
+                        <h3>Fatura Adresim</h3>
+                        <p>{{addressForm.addressTitle}}</p>
+                        <p>{{addressForm.city}}</p>
+                        <p>{{addressForm.state}}</p>
+                        <p>{{addressForm.address}}</p>
+                        <p>{{addressForm.name}}</p>
+                        <p>{{addressForm.mobilePhone}}</p>
+                        <p>{{addressForm.homePhone}}</p>
+                        <p>{{addressForm.billType}}</p>
+                    </div>
+                </div>
+            </div>
 
-            </div>
-    
-            <!-- Fatura Adresi Formu -->
-            <div class="col">
-                
-            </div>
+
         </ng-container>
         <ng-template #noAddress>
 
@@ -55,10 +70,5 @@
 
     </div>
 
-
-    <div class="row">
-        <app-add-address></app-add-address>
-    </div>
-
+   
 </div>
-

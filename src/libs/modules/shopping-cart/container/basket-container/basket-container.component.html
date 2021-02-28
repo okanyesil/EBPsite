@@ -55,10 +55,15 @@
     
     <mat-step state="cargo" label="Adres Bilgilerim" [completed]="address"> 
         <app-address (address)=isAddress($event) > </app-address>
-        <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
+        <div class="container">
+      
+          
+          <div class="row w-100">
+            <div class="col" ><button mat-button matStepperPrevious>Geri</button></div>
+            <div class="col"><button mat-button matStepperNext>İleri</button>   </div>
         </div>
+     
+      </div>
     </mat-step>
     
     <mat-step state="payment" label="Ödeme">

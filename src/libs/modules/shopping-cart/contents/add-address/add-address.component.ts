@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { MatDialogRef } from '@angular/material/dialog';
+import { Observable, Subscription } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { ShoppingCartService } from 'src/libs/modules/shared/services/shopping-cart.service';
+
 
 // import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
@@ -25,21 +28,24 @@ export class AddAddressComponent implements OnInit {
     billType:this.fb.control(null,[Validators.required]),
   })
   
-  constructor(private fb:FormBuilder){}
-  
+  constructor(private smt:ShoppingCartService,private fb:FormBuilder,public dialogRef:MatDialogRef<AddAddressComponent>){
+  }
+  subsciptions = new Subscription
   // constructor(private fb:FormBuilder,@Inject(MAT_DIALOG_DATA) public data:any, public dialogRef:MatDialogRef<AddAddressComponent>) { }
 
   ngOnInit(): void {
-    this.filteredOptions = this.addressForm.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value))
-    );
-  }
-  
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
+  close(){
+    this.dialogRef.close()
+  }
+    save(){
+      if(this.addressForm.valid){
+        this.dialogRef.close(this.addressForm.value)
+        this.smt.setAddress(this.addressForm.value)
+       
+         
+  }
+
+}
 }
