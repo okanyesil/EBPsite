@@ -32,7 +32,7 @@ export class YeniKitapComponent implements OnInit {
     this.auth.user.pipe(
       take(1),
       switchMap((user) => {
-        return from(this.firestore.collection('shoppingCart').add({...bilgi, userId: user.uid}));
+        return from(this.firestore.collection('shoppingCart').add({...bilgi,count:1, userId: user.uid}));
       }),
       catchError((err) => {
         const user = localStorage.getItem('user');

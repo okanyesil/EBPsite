@@ -5,4 +5,5 @@ export interface IBookModel {
   price: number;
   bookImage: string;
   oldPrice: number;
+  count:number;
 }

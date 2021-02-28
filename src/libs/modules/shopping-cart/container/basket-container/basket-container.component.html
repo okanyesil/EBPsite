@@ -1,0 +1,107 @@
+
+<mat-horizontal-stepper linear=true #stepper labelPosition="bottom" >     
+
+    <mat-step label="Sepetim" state="basket" completed=true >
+
+      <div class="row">
+        <div class="col-9">
+          <div class="row">
+            <div class="col">
+              <div class="kargo-info">
+                <div>
+                  <p>100 TL ve üzeri kargo bedava!</p>
+                  <p>Sepetini 100 TL'ye tamamla, ücretsiz kargo fırsatını yakala!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- <div class="row">
+           <div class="col">
+            <div class="kampanya" *ngIf="hediye">
+              <div>
+                  <p>150 TL ve üzerine {{hediye}} hediye!</p>
+                  <p>Kitap, fırsatı yakalayan herkesin kargosona doğrudan eklenecektir.{{hediye}}'ni ayrıca sepetinize eklemenize gerek yoktur!' </p>
+              </div>
+              <div class="kampanya-img">
+                  img gelecek
+              </div>
+            </div>
+           </div>
+          </div> -->
+    
+          <app-my-basket (basketInfo)="getBasketInfo($event)" ></app-my-basket>
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="basket-box">
+              <div class="sticky-box">
+                <app-basket-info [basketContent]="basketInfo"></app-basket-info>   
+              </div> 
+            </div>
+          
+        </div>
+
+      </div>
+
+     
+
+      <div class="basket-btns">
+        <button mat-button matStepperPrevious (click)="keepShopping()"><mat-icon>keyboard_arrow_left</mat-icon> Alışverişe devam et</button>
+        <button mat-button matStepperNext>Satın Al <mat-icon>keyboard_arrow_right</mat-icon></button>
+      </div>
+    </mat-step>
+    
+    <mat-step state="cargo" label="Adres Bilgilerim" [completed]="address"> 
+        <app-address (address)=isAddress($event) > </app-address>
+        <div class="container">
+      
+          
+          <div class="row w-100">
+            <div class="col" ><button mat-button matStepperPrevious>Geri</button></div>
+            <div class="col"><button mat-button matStepperNext>İleri</button>   </div>
+        </div>
+     
+      </div>
+    </mat-step>
+    
+    <mat-step state="payment" label="Ödeme">
+      
+        <app-payment></app-payment>
+
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      
+    </mat-step>
+    
+    <mat-step state="done">
+      <ng-template matStepLabel>onay</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+
+    <!--  icons  -->
+    <ng-template matStepperIcon="basket">
+      <mat-icon>shopping_basket</mat-icon>
+    </ng-template>
+    
+    <ng-template matStepperIcon="cargo">
+      <mat-icon>airport_shuttle</mat-icon>
+    </ng-template>  
+    
+    <ng-template matStepperIcon="payment">
+      <mat-icon>credit_card</mat-icon>
+    </ng-template>  
+
+    <ng-template matStepperIcon="done">
+      <mat-icon>done</mat-icon>
+    </ng-template> 
+</mat-horizontal-stepper>
+
+

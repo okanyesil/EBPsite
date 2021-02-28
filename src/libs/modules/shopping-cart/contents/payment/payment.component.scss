@@ -1,0 +1,39 @@
+form{
+    overflow: hidden;
+    padding:1%;
+}
+
+.form-container{
+margin-top: 2%;
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 2%;
+
+       
+}
+
+h3{
+    color:orange;
+}
+
+.form-text{
+    height: 150px;
+    overflow: auto;
+    background-color: gainsboro;
+    padding: 1%;
+}
+
+.col-9{
+    input{
+        width: 60%;
+    }
+}
+
+.IBAN{
+    background-color: gainsboro;
+    padding: 2%;
+}
+
+div.row{
+    margin: 2% 0;
+}
