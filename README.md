@@ -7,7 +7,7 @@ EBP site kodluyoruz için geliştirdiğimiz Kidega.coum'un klonu niteliğinde bi
  - Esmanur KARACA [Github Profil](https://github.com/esmanurkaraca)
  - İmran AYKUT [Github Profil](https://github.com/imrn1)
  - Fatma Nur Arslan [Github Profil](https://github.com/NurArslann)
- - Erdoğan Ersin KESKIN [Github Profil](https://github.com/erdoganersinkeskin)
+
 
 ## Projeyi Çalıştırmak için
  Bilgisayarınızda;
